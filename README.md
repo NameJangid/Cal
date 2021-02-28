@@ -8,4 +8,4 @@ npm run start
 ~~~
 
 
-URL : "http://NameJangid.github.io/cal"
+URL : "http://mukjan.github.io/cal"
