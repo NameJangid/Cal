@@ -1,4 +1,4 @@
-# React App For Hair 
+# React App For HairCalendar
 
 
 
