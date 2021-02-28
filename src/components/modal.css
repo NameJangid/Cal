@@ -1,0 +1,65 @@
+
+.modal {
+  width: 80%;
+  height: 63%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 10%;
+  background : white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  display: inline;
+}
+.modal.off {
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(8px);
+  transform: scale(0.33);
+  box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.2);
+}
+@supports (offset-rotation: 0deg) {
+  offset-rotation: 0deg;
+  offset-path: path("M 250,100 S -300,500 -700,-200");
+  .modal.off {
+    offset-distance: 100%;
+  }
+}
+@media (prefers-reduced-motion) {
+  .modal {
+    offset-path: none;
+  }
+}
+.modal h2 {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  margin: 0;
+}
+.modal .content {
+  padding: 1rem;
+}
+.modal .actions {
+  margin-bottom: 50%;
+  border-top: 1px solid #ccc;
+  background:white;
+  padding: 0.5rem 1rem;
+}
+.modal .actions button {
+  margin-right: 38%;
+  margin-left: 40%;
+
+  border: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+#centered-toggle-button {
+  position: relative;
+}
